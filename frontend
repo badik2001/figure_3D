@@ -1,1 +1,24 @@
-it's my first program's window. ahah, i'm frontend developer.
+from tkinter import*
+tk = Tk()
+canvas = Canvas(tk, height=500, width=500)
+canvas.pack()
+canvas.create_rectangle(10, 5, 490, 350)
+canvas.create_line(10, 35, 490, 35)
+tk.title("Приложение")
+
+
+def button_press1(): print("_")
+def button_press2(): print("[]")
+def button_press3(): print("×")
+
+
+b1 = Button(tk, text="_", command=button_press1)
+b1.place(x=400, y=8, width=20, height=20)
+b2 = Button(tk, text="[]", command=button_press2)
+b2.place(x=430, y=8, width=20, height=20)
+b3 = Button(tk, text="×", command=button_press3)
+b3.place(x=460, y=8, width=20, height=20)
+lbl1 = Label(tk, text="Window", font=("Times New Rumen", 8))
+lbl1.place(x=12, y=12)
+tk.mainloop()
+
